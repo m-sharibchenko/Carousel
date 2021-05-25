@@ -1,0 +1,19 @@
+.thumbnails {
+    overflow-y: auto;
+    height: 100px;
+    display: flex;
+}
+
+.thumbnail {
+    min-width: 200px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.show {
+    background-color: coral;
+}
+
+.blur {
+    background-color: darkgray;
+}
