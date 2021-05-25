@@ -1,0 +1,8 @@
+.main-container {
+    min-width: 100px;
+    height: 100px;
+
+    background-color: aquamarine;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
