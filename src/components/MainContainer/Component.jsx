@@ -8,6 +8,7 @@ export function MainContainer (props) {
   const { content, changeCurrent } = props
   const currentElement = useRef()
 
+  // if event scroll right - scrollTo (next point)
 
   useEffect(() => {
     currentElement.current.scrollIntoView();
@@ -27,7 +28,7 @@ export function MainContainer (props) {
     <div className="main-container">
       <button
         onClick={showPrev}
-        className="btn-change-item btn-prev"
+        className="btn-change-item btn_prev"
         // style={{display: content.current === content[0] ? 'none' : null}}
       >
         prev
@@ -36,9 +37,9 @@ export function MainContainer (props) {
       <ul className="main-container__content">
         {content.map(({ id, content, current }) => {
           return <li key={id}
-            // style={{ display: current ? null : 'none'}}
-                     className={current ? 'content__item-wrapper current' : 'content__item-wrapper'}
+                     className={current ? 'content__item-wrapper content_current' : 'content__item-wrapper'}
                      ref={current ? currentElement : null}
+                     // возможно убрать в классах content_current (нет необходимости)
           >
             <div className='content__item'>{content}</div>
           </li>
@@ -48,7 +49,7 @@ export function MainContainer (props) {
 
       <button
         onClick={showNext}
-        className="btn-change-item btn-next"
+        className="btn-change-item btn_next"
         // style={{display: content.current === content[content.length - 1] ? 'none' : null}}
       >
         next
