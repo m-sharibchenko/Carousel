@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { content } from '../constants'
+import { store } from '../store'
 import { MainContainer } from './MainContainer'
 import { Thumbnails } from './Thumbnails'
 
 export function App () {
-  const [items, setItems] = useState(content)
+  const [items, setItems] = useState(store)
 
   const onChangeCurrent = (itemId) => {
     const newItems = items.map(item => {

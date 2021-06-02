@@ -1,6 +1,6 @@
 import uniqid from 'uniqid'
 
-export const content = [
+export const store = [
   {
     id: uniqid(),
     content: 'test1',

@@ -17,18 +17,18 @@ export function Thumbnails (props) {
   }
 
   return (
-    <div className="thumbnails">
+    <ul className="thumbnails">
       {content.map(({id, content, current}) => {
-        return <div key={id}
+        return <li key={id}
                     data-id={id}
                     className={current ? "thumbnail show" : "thumbnail blur"}
                     ref={current ? currentThumbnail : null}
                     onClick={onThumbnailClick}
         >
           {content}
-        </div>
+        </li>
       })}
-    </div>
+    </ul>
   )
 }
 
